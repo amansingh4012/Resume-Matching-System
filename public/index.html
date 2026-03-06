@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Matching System</title>
+<style>
+/* ── Reset & Base ──────────────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:#f0f2f5;color:#333;min-height:100vh;
+}
+
+/* ── Navbar ────────────────────────────────────────────────────────────────── */
+.navbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:#1a1a2e;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:56px;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+.navbar h1{font-size:1.2rem;font-weight:600;letter-spacing:.5px}
+.nav-tabs{display:flex;gap:4px}
+.nav-tab{
+  background:transparent;border:none;color:rgba(255,255,255,.6);
+  padding:8px 20px;font-size:.9rem;cursor:pointer;
+  border-radius:6px 6px 0 0;transition:all .2s;font-weight:500;
+}
+.nav-tab:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-tab.active{color:#fff;background:rgba(255,255,255,.15)}
+
+/* ── Main Layout ───────────────────────────────────────────────────────────── */
+.main{padding:72px 24px 24px;max-width:1280px;margin:0 auto}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.panels{display:flex;gap:24px}
+.panel{flex:1;min-width:0}
+
+/* ── Cards ─────────────────────────────────────────────────────────────────── */
+.card{
+  background:#fff;border-radius:8px;padding:20px;
+  box-shadow:0 1px 4px rgba(0,0,0,.08);
+  margin-bottom:20px;transition:box-shadow .2s;
+}
+.card:hover{box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.card h2{font-size:1.05rem;margin-bottom:14px;color:#1a1a2e}
+.card h3{font-size:.95rem;margin-bottom:10px;color:#1a1a2e}
+
+/* ── Drop Zone ─────────────────────────────────────────────────────────────── */
+.drop-zone{
+  border:2px dashed #c0c4cc;border-radius:8px;padding:32px 16px;
+  text-align:center;cursor:pointer;transition:all .25s;
+  background:#fafbfc;position:relative;
+}
+.drop-zone:hover,.drop-zone.dragover{border-color:#4a6cf7;background:#eef1ff}
+.drop-zone p{color:#888;font-size:.9rem;margin-bottom:8px}
+.drop-zone .icon{font-size:2rem;margin-bottom:4px;display:block;color:#aab}
+.drop-zone input[type=file]{
+  position:absolute;inset:0;opacity:0;cursor:pointer;
+}
+.file-info{
+  margin-top:10px;padding:10px 14px;background:#f6f8fa;border-radius:6px;
+  font-size:.85rem;color:#444;display:none;
+}
+.file-info.show{display:flex;align-items:center;justify-content:space-between}
+.file-info .fname{font-weight:600}
+.file-info .fsize{color:#888}
+
+/* ── Buttons ───────────────────────────────────────────────────────────────── */
+.btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:9px 18px;font-size:.88rem;font-weight:500;
+  border:none;border-radius:6px;cursor:pointer;
+  transition:all .2s;
+}
+.btn-primary{background:#4a6cf7;color:#fff}
+.btn-primary:hover:not(:disabled){background:#3a5ce5}
+.btn-secondary{background:#e9ecef;color:#333}
+.btn-secondary:hover:not(:disabled){background:#dee2e6}
+.btn-danger{background:#e74c3c;color:#fff;padding:4px 10px;font-size:.8rem}
+.btn-danger:hover{background:#c0392b}
+.btn-success{background:#27ae60;color:#fff}
+.btn-success:hover:not(:disabled){background:#219a52}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-large{
+  padding:14px 32px;font-size:1rem;width:100%;justify-content:center;
+  margin-top:8px;
+}
+
+/* ── Textarea ──────────────────────────────────────────────────────────────── */
+.jd-textarea{
+  width:100%;min-height:120px;padding:12px;
+  border:1px solid #d0d4da;border-radius:6px;font-size:.88rem;
+  font-family:inherit;resize:vertical;transition:border-color .2s;
+}
+.jd-textarea:focus{outline:none;border-color:#4a6cf7}
+.btn-row{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+
+/* ── JD List ───────────────────────────────────────────────────────────────── */
+.jd-list{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.jd-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:10px 12px;background:#f6f8fa;border-radius:6px;
+  font-size:.84rem;
+}
+.jd-item .jd-id{
+  font-weight:700;color:#4a6cf7;white-space:nowrap;min-width:50px;
+}
+.jd-item .jd-preview{flex:1;color:#555;line-height:1.4}
+.jd-item .btn-danger{flex-shrink:0;align-self:center}
+.jd-item .jd-clickable{display:flex;align-items:flex-start;gap:10px;flex:1;cursor:pointer;min-width:0}
+.jd-item .jd-clickable:hover .jd-preview{color:#333;text-decoration:underline}
+.jd-count{font-size:.82rem;color:#888;margin-top:6px}
+
+/* ── Parsed Resume Card ───────────────────────────────────────────────────── */
+.parsed-resume{margin-top:14px;display:none}
+.parsed-resume.show{display:block}
+.parsed-resume .pr-row{
+  display:flex;gap:8px;padding:6px 0;
+  border-bottom:1px solid #f0f0f0;font-size:.88rem;
+}
+.parsed-resume .pr-label{font-weight:600;color:#555;min-width:90px}
+.parsed-resume .pr-value{color:#222}
+
+/* ── Skill Pills ───────────────────────────────────────────────────────────── */
+.pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.pill{
+  display:inline-flex;align-items:center;gap:4px;
+  padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:500;
+}
+.pill-skill{background:#e8f0fe;color:#1a56db}
+.pill-match{background:rgba(39,174,96,.15);color:#1e8449}
+.pill-match::before{content:"\2713 ";font-weight:700}
+.pill-miss{background:rgba(231,76,60,.12);color:#c0392b}
+.pill-miss::before{content:"\2717 ";font-weight:700}
+
+/* ── Spinner ───────────────────────────────────────────────────────────────── */
+.spinner{
+  display:inline-block;width:20px;height:20px;
+  border:3px solid rgba(255,255,255,.3);border-top-color:#fff;
+  border-radius:50%;animation:spin .6s linear infinite;
+}
+.spinner-dark{border-color:rgba(0,0,0,.12);border-top-color:#4a6cf7}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-overlay{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(26,26,46,.55);backdrop-filter:blur(2px);
+  justify-content:center;align-items:center;flex-direction:column;gap:16px;
+}
+.loading-overlay.show{display:flex}
+.loading-overlay .big-spinner{
+  width:48px;height:48px;
+  border:5px solid rgba(255,255,255,.2);border-top-color:#fff;
+  border-radius:50%;animation:spin .7s linear infinite;
+}
+.loading-overlay p{color:#fff;font-size:1rem}
+
+/* ── Toast ─────────────────────────────────────────────────────────────────── */
+.toast-container{
+  position:fixed;top:64px;right:20px;z-index:300;
+  display:flex;flex-direction:column;gap:8px;
+}
+.toast{
+  padding:12px 20px;border-radius:8px;font-size:.88rem;
+  color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.2);
+  animation:slideIn .3s ease;max-width:380px;
+}
+.toast-error{background:#e74c3c}
+.toast-success{background:#27ae60}
+.toast-info{background:#4a6cf7}
+@keyframes slideIn{from{transform:translateX(100%);opacity:0}to{transform:translateX(0);opacity:1}}
+
+/* ── Results Tab ───────────────────────────────────────────────────────────── */
+.candidate-card{text-align:center;padding:28px 20px}
+.candidate-card .cname{font-size:1.6rem;font-weight:700;color:#1a1a2e}
+.candidate-card .cmeta{
+  display:flex;gap:20px;justify-content:center;margin-top:10px;
+  font-size:.9rem;color:#555;flex-wrap:wrap;
+}
+.candidate-card .cmeta span{display:flex;align-items:center;gap:4px}
+.candidate-card .cmeta strong{color:#222}
+.candidate-skills{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+
+.jobs-grid{display:flex;flex-direction:column;gap:16px;margin-top:20px}
+.job-card{padding:20px}
+.job-header{display:flex;align-items:center;gap:16px;margin-bottom:12px;flex-wrap:wrap}
+.job-header .job-title{flex:1}
+.job-header .job-title h3{font-size:1.05rem;color:#1a1a2e;margin-bottom:2px}
+.job-header .job-title .job-id{font-size:.8rem;color:#888}
+
+/* ── Score Ring ─────────────────────────────────────────────────────────────── */
+.score-ring{
+  width:60px;height:60px;position:relative;flex-shrink:0;
+}
+.score-ring svg{width:60px;height:60px;transform:rotate(-90deg)}
+.score-ring circle{fill:none;stroke-width:5}
+.score-ring .bg{stroke:#e9ecef}
+.score-ring .fg{stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.score-ring .score-label{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:.82rem;font-weight:700;
+}
+.score-green .fg{stroke:#27ae60} .score-green .score-label{color:#27ae60}
+.score-yellow .fg{stroke:#f39c12} .score-yellow .score-label{color:#f39c12}
+.score-red .fg{stroke:#e74c3c} .score-red .score-label{color:#e74c3c}
+
+.about-role{font-size:.88rem;color:#555;line-height:1.5;margin-bottom:12px}
+.about-role.truncated{
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  overflow:hidden;cursor:pointer;
+}
+.about-role.truncated:hover{color:#333}
+.expand-btn{
+  background:none;border:none;color:#4a6cf7;cursor:pointer;
+  font-size:.82rem;padding:0;margin-bottom:10px;
+}
+.skill-count{font-size:.82rem;color:#888;margin-bottom:6px}
+
+/* ── Raw JSON ──────────────────────────────────────────────────────────────── */
+.raw-section{margin-top:24px}
+.raw-toggle{
+  display:flex;align-items:center;gap:8px;cursor:pointer;
+  background:none;border:none;font-size:.95rem;font-weight:600;
+  color:#1a1a2e;padding:10px 0;width:100%;text-align:left;
+}
+.raw-toggle .arrow{transition:transform .2s;display:inline-block}
+.raw-toggle.open .arrow{transform:rotate(90deg)}
+.raw-body{display:none;position:relative}
+.raw-body.show{display:block}
+.raw-body pre{
+  background:#1e1e2e;color:#cdd6f4;padding:16px;border-radius:8px;
+  overflow-x:auto;font-size:.82rem;line-height:1.5;max-height:500px;
+  overflow-y:auto;
+}
+.copy-btn{
+  position:absolute;top:8px;right:8px;
+  background:rgba(255,255,255,.15);border:none;color:#cdd6f4;
+  padding:5px 12px;border-radius:4px;cursor:pointer;font-size:.78rem;
+  transition:background .2s;
+}
+.copy-btn:hover{background:rgba(255,255,255,.25)}
+
+/* ── No Results ────────────────────────────────────────────────────────────── */
+.no-results{
+  text-align:center;padding:60px 20px;color:#888;
+}
+.no-results .icon{font-size:3rem;margin-bottom:12px;display:block}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media(max-width:768px){
+  .panels{flex-direction:column}
+  .navbar{padding:0 12px}
+  .navbar h1{font-size:1rem}
+  .main{padding:64px 12px 12px}
+  .candidate-card .cname{font-size:1.3rem}
+  .job-header{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navbar ─────────────────────────────────────────────────────────────── -->
+<nav class="navbar">
+  <h1>Resume Matching System</h1>
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="match">Match Resume</button>
+    <button class="nav-tab" data-tab="results">Results</button>
+  </div>
+</nav>
+
+<!-- ── Toast Container ───────────────────────────────────────────────────── -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ── Loading Overlay ───────────────────────────────────────────────────── -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="big-spinner"></div>
+  <p id="loadingText">Matching resume against job descriptions...</p>
+</div>
+
+<!-- ── Main ───────────────────────────────────────────────────────────────── -->
+<div class="main">
+
+  <!-- ── TAB 1: MATCH RESUME ───────────────────────────────────────────── -->
+  <div class="tab-content active" id="tab-match">
+    <div class="panels">
+
+      <!-- Left Panel: Upload Resume -->
+      <div class="panel">
+        <div class="card">
+          <h2>Upload Resume</h2>
+          <div class="drop-zone" id="dropZone">
+            <input type="file" id="fileInput" accept=".pdf,application/pdf">
+            <p style="font-size:1.1rem;font-weight:600;color:#aab;margin-bottom:4px">PDF</p>
+            <p>Drag &amp; drop your PDF resume here</p>
+            <p style="font-size:.8rem;color:#aaa">or click to browse</p>
+          </div>
+          <div class="file-info" id="fileInfo">
+            <span class="fname" id="fileName"></span>
+            <span class="fsize" id="fileSize"></span>
+          </div>
+          <button class="btn btn-primary" style="margin-top:12px;width:100%" id="parseResumeBtn" disabled>
+            Parse Resume
+          </button>
+          <div class="parsed-resume" id="parsedResume">
+            <h3 style="margin-top:10px">Parsed Resume Data</h3>
+            <div class="pr-row"><span class="pr-label">Name</span><span class="pr-value" id="prName">—</span></div>
+            <div class="pr-row"><span class="pr-label">Salary</span><span class="pr-value" id="prSalary">—</span></div>
+            <div class="pr-row"><span class="pr-label">Experience</span><span class="pr-value" id="prExp">—</span></div>
+            <div class="pr-row"><span class="pr-label">Skills</span>
+              <div class="pr-value"><div class="pills" id="prSkills"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel: Job Descriptions -->
+      <div class="panel">
+        <div class="card">
+          <h2>Job Descriptions</h2>
+          <textarea class="jd-textarea" id="jdTextarea" placeholder="Paste a job description here..."></textarea>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="addJdBtn">Add JD</button>
+            <button class="btn btn-secondary" id="loadSampleBtn">Load Sample JDs</button>
+          </div>
+          <div class="jd-count" id="jdCount"></div>
+          <div class="jd-list" id="jdList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: Match Button -->
+    <button class="btn btn-success btn-large" id="matchBtn" disabled>
+      Match Resume Against JDs
+    </button>
+  </div>
+
+  <!-- ── TAB 2: RESULTS ───────────────────────────────────────────────── -->
+  <div class="tab-content" id="tab-results">
+    <div class="no-results" id="noResults">
+      <p style="font-size:1.2rem;font-weight:600;color:#aaa;margin-bottom:8px">No Results</p>
+      <p>Upload a resume and add job descriptions, then click "Match Resume Against JDs".</p>
+    </div>
+    <div id="resultsContent" style="display:none">
+      <!-- Candidate Profile -->
+      <div class="card candidate-card" id="candidateCard"></div>
+      <!-- Matching Jobs -->
+      <div class="jobs-grid" id="jobsGrid"></div>
+      <!-- Raw JSON -->
+      <div class="raw-section">
+        <button class="raw-toggle" id="rawToggle">
+          <span class="arrow">&#9654;</span> Raw JSON Output
+        </button>
+        <div class="raw-body" id="rawBody">
+          <button class="copy-btn" id="copyJsonBtn">Copy JSON</button>
+          <pre><code id="rawJson"></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════════════
+   Resume Matching System — Frontend Logic
+   ═══════════════════════════════════════════════════════════════════════════ */
+(function () {
+  'use strict';
+
+  // ── State ────────────────────────────────────────────────────────────────
+  let resumeFile = null;
+  let jdItems = []; // { jobId, jdText, preview }
+  let jdCounter = 0;
+  let lastResult = null;
+  let jdMode = null; // 'sample' or 'manual'
+
+  // ── DOM refs ─────────────────────────────────────────────────────────────
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
+
+  const dropZone = $('#dropZone');
+  const fileInput = $('#fileInput');
+  const fileInfo = $('#fileInfo');
+  const fileName = $('#fileName');
+  const fileSize = $('#fileSize');
+  const parseResumeBtn = $('#parseResumeBtn');
+  const parsedResume = $('#parsedResume');
+  const jdTextarea = $('#jdTextarea');
+  const addJdBtn = $('#addJdBtn');
+  const loadSampleBtn = $('#loadSampleBtn');
+  const jdList = $('#jdList');
+  const jdCount = $('#jdCount');
+  const matchBtn = $('#matchBtn');
+  const loadingOverlay = $('#loadingOverlay');
+  const loadingText = $('#loadingText');
+  const toastContainer = $('#toastContainer');
+  const noResults = $('#noResults');
+  const resultsContent = $('#resultsContent');
+  const candidateCard = $('#candidateCard');
+  const jobsGrid = $('#jobsGrid');
+  const rawToggle = $('#rawToggle');
+  const rawBody = $('#rawBody');
+  const rawJson = $('#rawJson');
+  const copyJsonBtn = $('#copyJsonBtn');
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+  function esc(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  function formatBytes(b) {
+    if (b < 1024) return b + ' B';
+    if (b < 1048576) return (b / 1024).toFixed(1) + ' KB';
+    return (b / 1048576).toFixed(1) + ' MB';
+  }
+
+  function toast(msg, type) {
+    type = type || 'info';
+    var el = document.createElement('div');
+    el.className = 'toast toast-' + type;
+    el.textContent = msg;
+    toastContainer.appendChild(el);
+    setTimeout(function () {
+      el.style.opacity = '0';
+      el.style.transition = 'opacity .3s';
+      setTimeout(function () { el.remove(); }, 300);
+    }, 5000);
+  }
+
+  function showLoading(text) {
+    loadingText.textContent = text || 'Processing...';
+    loadingOverlay.classList.add('show');
+  }
+  function hideLoading() { loadingOverlay.classList.remove('show'); }
+
+  function updateMatchBtn() {
+    matchBtn.disabled = !(resumeFile && jdItems.length > 0);
+  }
+
+  function updateJdCount() {
+    if (!jdItems.length) { jdCount.textContent = ''; return; }
+    var label = jdMode === 'sample' ? ' sample' : ' manual';
+    jdCount.textContent = jdItems.length + label + ' job description' + (jdItems.length > 1 ? 's' : '') + ' added';
+  }
+
+  // ── Tabs ─────────────────────────────────────────────────────────────────
+  $$('.nav-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      $$('.nav-tab').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      $$('.tab-content').forEach(function (t) { t.classList.remove('active'); });
+      $('#tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  function switchTab(name) {
+    $$('.nav-tab').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.tab === name);
+    });
+    $$('.tab-content').forEach(function (t) {
+      t.classList.toggle('active', t.id === 'tab-' + name);
+    });
+  }
+
+  // ── File Upload (Drag & Drop + Click) ───────────────────────────────────
+  dropZone.addEventListener('dragover', function (e) {
+    e.preventDefault();
+    dropZone.classList.add('dragover');
+  });
+  dropZone.addEventListener('dragleave', function () {
+    dropZone.classList.remove('dragover');
+  });
+  dropZone.addEventListener('drop', function (e) {
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    var files = e.dataTransfer.files;
+    if (files.length && files[0].type === 'application/pdf') {
+      setResumeFile(files[0]);
+    } else {
+      toast('Please drop a PDF file.', 'error');
+    }
+  });
+  fileInput.addEventListener('change', function () {
+    if (fileInput.files.length) setResumeFile(fileInput.files[0]);
+  });
+
+  function setResumeFile(file) {
+    resumeFile = file;
+    fileName.textContent = esc(file.name);
+    fileSize.textContent = formatBytes(file.size);
+    fileInfo.classList.add('show');
+    parseResumeBtn.disabled = false;
+    parsedResume.classList.remove('show');
+    updateMatchBtn();
+  }
+
+  // ── Parse Resume ────────────────────────────────────────────────────────
+  parseResumeBtn.addEventListener('click', function () {
+    if (!resumeFile) return;
+    parseResumeBtn.disabled = true;
+    parseResumeBtn.innerHTML = '<span class="spinner"></span> Parsing...';
+
+    var fd = new FormData();
+    fd.append('resume', resumeFile);
+
+    fetch('/api/parse-resume', { method: 'POST', body: fd })
+      .then(function (r) {
+        if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Parse failed'); });
+        return r.json();
+      })
+      .then(function (data) {
+        $('#prName').textContent = data.name || '—';
+        $('#prSalary').textContent = data.salary || '—';
+        $('#prExp').textContent = data.yearOfExperience != null ? data.yearOfExperience + ' years' : '—';
+        var pillsEl = $('#prSkills');
+        pillsEl.innerHTML = '';
+        (data.resumeSkills || []).forEach(function (s) {
+          var sp = document.createElement('span');
+          sp.className = 'pill pill-skill';
+          sp.textContent = s;
+          pillsEl.appendChild(sp);
+        });
+        parsedResume.classList.add('show');
+        toast('Resume parsed successfully!', 'success');
+      })
+      .catch(function (e) { toast(e.message, 'error'); })
+      .finally(function () {
+        parseResumeBtn.disabled = false;
+        parseResumeBtn.innerHTML = 'Parse Resume';
+      });
+  });
+
+  // ── Add JD ──────────────────────────────────────────────────────────────
+  addJdBtn.addEventListener('click', function () {
+    var text = jdTextarea.value.trim();
+    if (!text) { toast('Please paste a job description first.', 'error'); return; }
+    // If switching from sample mode, clear sample JDs first
+    if (jdMode === 'sample') {
+      jdItems = [];
+      jdCounter = 0;
+      jdMode = 'manual';
+    }
+    jdMode = 'manual';
+    jdCounter++;
+    var id = 'JD' + String(jdCounter).padStart(3, '0');
+    jdItems.push({ jobId: id, jdText: text, preview: text.substring(0, 100) });
+    jdTextarea.value = '';
+    renderJdList();
+    updateMatchBtn();
+    toast('Added ' + id, 'success');
+  });
+
+  function renderJdList() {
+    jdList.innerHTML = '';
+    jdItems.forEach(function (jd, i) {
+      var div = document.createElement('div');
+      div.className = 'jd-item';
+      div.innerHTML =
+        '<div class="jd-clickable" data-idx="' + i + '">' +
+          '<span class="jd-id">' + esc(jd.jobId) + '</span>' +
+          '<span class="jd-preview">' + esc(jd.preview) + (jd.jdText.length > 100 ? '...' : '') + '</span>' +
+        '</div>' +
+        '<button class="btn btn-danger" data-idx="' + i + '">&times;</button>';
+      jdList.appendChild(div);
+    });
+    updateJdCount();
+    // Bind click-to-load into textarea
+    jdList.querySelectorAll('.jd-clickable').forEach(function (el) {
+      el.addEventListener('click', function () {
+        var idx = parseInt(el.dataset.idx);
+        jdTextarea.value = jdItems[idx].jdText;
+        jdTextarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        jdTextarea.focus();
+        toast('Loaded ' + jdItems[idx].jobId + ' into editor', 'info');
+      });
+    });
+    // Bind remove buttons
+    jdList.querySelectorAll('.btn-danger').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        jdItems.splice(parseInt(btn.dataset.idx), 1);
+        renderJdList();
+        updateMatchBtn();
+      });
+    });
+  }
+
+  // ── Load Sample JDs ─────────────────────────────────────────────────────
+  loadSampleBtn.addEventListener('click', function () {
+    loadSampleBtn.disabled = true;
+    loadSampleBtn.innerHTML = '<span class="spinner spinner-dark"></span> Loading...';
+
+    fetch('/api/sample-jds')
+      .then(function (r) {
+        if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Failed'); });
+        return r.json();
+      })
+      .then(function (samples) {
+        // Reset current JDs — sample mode replaces everything
+        jdItems = [];
+        jdCounter = 0;
+        jdMode = 'sample';
+        jdTextarea.value = '';
+        samples.forEach(function (s) {
+          jdCounter++;
+          var id = 'JD' + String(jdCounter).padStart(3, '0');
+          jdItems.push({ jobId: id, jdText: s.jdText, preview: s.jdText.substring(0, 100) });
+        });
+        renderJdList();
+        updateMatchBtn();
+        toast('Loaded ' + samples.length + ' sample job descriptions!', 'success');
+      })
+      .catch(function (e) { toast(e.message, 'error'); })
+      .finally(function () {
+        loadSampleBtn.disabled = false;
+        loadSampleBtn.innerHTML = 'Load Sample JDs';
+      });
+  });
+
+  // ── Match ───────────────────────────────────────────────────────────────
+  matchBtn.addEventListener('click', function () {
+    if (!resumeFile || jdItems.length === 0) return;
+
+    showLoading('Matching resume against ' + jdItems.length + ' job description' + (jdItems.length > 1 ? 's' : '') + '...');
+
+    var fd = new FormData();
+    fd.append('resume', resumeFile);
+    fd.append('jds', JSON.stringify(jdItems.map(function (jd) {
+      return { jdText: jd.jdText, jobId: jd.jobId };
+    })));
+
+    fetch('/api/match', { method: 'POST', body: fd })
+      .then(function (r) {
+        if (!r.ok) return r.json().then(function (d) { throw new Error(d.error || 'Match failed'); });
+        return r.json();
+      })
+      .then(function (data) {
+        lastResult = data;
+        renderResults(data);
+        switchTab('results');
+        toast('Matching complete! Found ' + data.matchingJobs.length + ' jobs.', 'success');
+      })
+      .catch(function (e) { toast(e.message, 'error'); })
+      .finally(function () { hideLoading(); });
+  });
+
+  // ── Render Results ──────────────────────────────────────────────────────
+  function renderResults(data) {
+    noResults.style.display = 'none';
+    resultsContent.style.display = 'block';
+
+    // Candidate card
+    var skillsHtml = (data.resumeSkills || []).map(function (s) {
+      return '<span class="pill pill-skill">' + esc(s) + '</span>';
+    }).join('');
+
+    candidateCard.innerHTML =
+      '<div class="cname">' + esc(data.name || 'Unknown') + '</div>' +
+      '<div class="cmeta">' +
+        '<span>Salary: <strong>' + esc(data.salary || 'N/A') + '</strong></span>' +
+        '<span>Experience: <strong>' + (data.yearOfExperience != null ? data.yearOfExperience + ' years' : 'N/A') + '</strong></span>' +
+        '<span>Skills: <strong>' + (data.resumeSkills ? data.resumeSkills.length : 0) + '</strong></span>' +
+      '</div>' +
+      '<div class="candidate-skills" style="margin-top:14px">' + skillsHtml + '</div>';
+
+    // Job cards
+    jobsGrid.innerHTML = '';
+    (data.matchingJobs || []).forEach(function (job) {
+      var score = job.matchingScore || 0;
+      var colorClass = score >= 70 ? 'score-green' : score >= 40 ? 'score-yellow' : 'score-red';
+      var circumference = 2 * Math.PI * 25;
+      var offset = circumference - (score / 100) * circumference;
+
+      var matched = (job.skillsAnalysis || []).filter(function (s) { return s.presentInResume; }).length;
+      var total = (job.skillsAnalysis || []).length;
+
+      var skillsHtml = (job.skillsAnalysis || []).map(function (s) {
+        return '<span class="pill ' + (s.presentInResume ? 'pill-match' : 'pill-miss') + '">' + esc(s.skill) + '</span>';
+      }).join('');
+
+      var aboutText = job.aboutRole || '';
+      var needsTrunc = aboutText.length > 200;
+
+      var card = document.createElement('div');
+      card.className = 'card job-card';
+      card.innerHTML =
+        '<div class="job-header">' +
+          '<div class="job-title"><h3>' + esc(job.role || 'Untitled Role') + '</h3><span class="job-id">' + esc(job.jobId) + '</span></div>' +
+          '<div class="score-ring ' + colorClass + '">' +
+            '<svg viewBox="0 0 60 60">' +
+              '<circle class="bg" cx="30" cy="30" r="25"/>' +
+              '<circle class="fg" cx="30" cy="30" r="25" stroke-dasharray="' + circumference + '" stroke-dashoffset="' + circumference + '"/>' +
+            '</svg>' +
+            '<div class="score-label">' + score + '%</div>' +
+          '</div>' +
+        '</div>' +
+        (aboutText ? '<div class="about-role' + (needsTrunc ? ' truncated' : '') + '">' + esc(aboutText) + '</div>' : '') +
+        (needsTrunc ? '<button class="expand-btn">Show more</button>' : '') +
+        '<div class="skill-count">' + matched + ' of ' + total + ' skills matched</div>' +
+        '<div class="pills">' + skillsHtml + '</div>';
+
+      jobsGrid.appendChild(card);
+
+      // Animate score ring
+      var fg = card.querySelector('.fg');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          fg.style.strokeDashoffset = offset;
+        });
+      });
+
+      // Expand / collapse about text
+      if (needsTrunc) {
+        var aboutEl = card.querySelector('.about-role');
+        var expandBtn = card.querySelector('.expand-btn');
+        expandBtn.addEventListener('click', function () {
+          var isExpanded = !aboutEl.classList.contains('truncated');
+          if (isExpanded) {
+            aboutEl.classList.add('truncated');
+            expandBtn.textContent = 'Show more';
+          } else {
+            aboutEl.classList.remove('truncated');
+            expandBtn.textContent = 'Show less';
+          }
+        });
+      }
+    });
+
+    // Raw JSON
+    rawJson.textContent = JSON.stringify(data, null, 2);
+  }
+
+  // ── Raw JSON Toggle ─────────────────────────────────────────────────────
+  rawToggle.addEventListener('click', function () {
+    rawToggle.classList.toggle('open');
+    rawBody.classList.toggle('show');
+  });
+
+  // ── Copy JSON ───────────────────────────────────────────────────────────
+  copyJsonBtn.addEventListener('click', function () {
+    if (!lastResult) return;
+    navigator.clipboard.writeText(JSON.stringify(lastResult, null, 2)).then(function () {
+      copyJsonBtn.textContent = 'Copied!';
+      setTimeout(function () { copyJsonBtn.textContent = 'Copy JSON'; }, 2000);
+    }).catch(function () {
+      toast('Failed to copy to clipboard.', 'error');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
