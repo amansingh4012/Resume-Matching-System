@@ -74,13 +74,13 @@ async function main() {
   const args = parseArgs(process.argv);
 
   // ── Server mode ──────────────────────────────────────────────────────────
-  if (args.server) {
+  if (args.server || process.env.NODE_ENV === 'production') {
     const express = require('express');
     const { createApp } = require('./api/routes');
     const app = createApp();
     // Serve static frontend from public/ BEFORE API routes
     app.use(express.static(path.join(__dirname, '..', 'public')));
-    const port = args.port || 3000;
+    const port = parseInt(args.port || process.env.PORT || 3000, 10);
     app.listen(port, () => {
       console.log(`Resume Matching API server running on http://localhost:${port}`);
       console.log('Endpoints:');
