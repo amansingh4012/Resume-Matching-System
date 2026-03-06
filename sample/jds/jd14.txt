@@ -1,0 +1,32 @@
+Software Engineer Mid - Forensic and Investigative Technologies
+ForenTech Solutions
+
+Location: Quantico, VA
+Salary: $95,000 - $130,000 per year
+
+About the Role
+We are seeking a mid-level Software Engineer to join our forensic and investigative technologies division. You will develop software tools that support law enforcement and intelligence agencies in digital forensic analysis and case management.
+
+Job Description
+As a Software Engineer, you will build and maintain applications for digital forensic analysis, evidence management, and investigative workflows. You will work with large datasets, develop intuitive user interfaces, and ensure data integrity and security across all systems.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science or related field
+- 3+ years of experience in software development
+- Strong proficiency in Java and Python
+- Experience with JavaScript and React
+- Knowledge of SQL databases (PostgreSQL, MySQL)
+- Experience with REST API development
+- Familiarity with Docker
+- Experience with Git version control
+- Understanding of Agile development practices
+
+Preferred Qualifications:
+- Experience with Node.js and Express
+- Knowledge of MongoDB or ElasticSearch
+- Familiarity with AWS or Azure cloud services
+- Experience with CI/CD pipelines
+- Understanding of Linux operating systems
+- Knowledge of TypeScript
+- Experience with Kubernetes
+- Familiarity with JIRA and Confluence

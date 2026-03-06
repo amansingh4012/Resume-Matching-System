@@ -1,0 +1,32 @@
+Software Engineer, Infrastructure
+Meta
+
+Location: Menlo Park, CA
+Compensation: $180,000 - $220,000
+
+About the Role
+Meta is looking for a Software Engineer to join our Infrastructure team. You will build and scale the systems that power Meta's family of apps serving billions of users worldwide.
+
+The Opportunity
+As a Software Engineer on the Infrastructure team, you will design, build, and maintain large-scale distributed systems. You will work on performance optimization, reliability engineering, and infrastructure automation that supports Meta's products.
+
+Minimum Qualifications:
+- Bachelor's with 5+ years of experience, or Master's with 3+ years of experience in software engineering
+- Strong proficiency in Python and C++
+- Experience with Microservices architecture and distributed systems
+- Hands-on experience with Linux operating system
+- Experience building and consuming REST APIs
+- Proficiency in SQL and NoSQL databases (MySQL, MongoDB, Cassandra)
+- Knowledge of Docker and Kubernetes
+- Experience with Git version control
+
+Preferred Qualifications:
+- Experience with Go or Rust programming languages
+- Knowledge of gRPC and Protobuf
+- Familiarity with Terraform and infrastructure-as-code
+- Experience with AWS or GCP cloud platforms
+- Understanding of CI/CD pipelines and DevOps practices
+- Experience with Redis and caching systems
+- Knowledge of Grafana, Prometheus, and monitoring tools
+- Familiarity with ELK Stack (ElasticSearch, Logstash, Kibana)
+- Experience with Data Pipelines

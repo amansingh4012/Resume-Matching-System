@@ -1,0 +1,32 @@
+Software Engineer - Command and Control Systems
+Lockheed Martin
+
+Location: Boulder, CO
+Compensation: $139,000 - $160,000 per year
+
+About the Role
+Lockheed Martin is seeking a Software Engineer to work on Command and Control (C2) systems for defense applications. You will develop mission-critical software that enables military command operations.
+
+Position Overview
+You will design and implement software for real-time command and control systems. This includes developing new capabilities, maintaining existing systems, and working closely with systems engineers and domain experts to deliver reliable defense software solutions.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science, Software Engineering, or related field
+- 5+ years of experience in software development
+- Strong proficiency in Java and C++
+- Experience with Object Oriented Programming and System Design
+- Knowledge of Linux and Unix operating systems
+- Proficiency in SQL databases (Oracle, PostgreSQL)
+- Experience with Agile and SDLC methodologies
+- Experience with Git and version control practices
+
+Desired Qualifications:
+- Experience with Python scripting
+- Knowledge of Docker and Kubernetes
+- Familiarity with React or Angular for UI development
+- Experience with REST API development
+- Understanding of DevOps and CI/CD practices
+- Knowledge of Jenkins
+- Experience with Spring Boot
+- Familiarity with JIRA, Confluence, and SVN
+- Experience with Microservices architecture

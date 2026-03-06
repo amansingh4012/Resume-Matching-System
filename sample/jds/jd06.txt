@@ -1,0 +1,31 @@
+Software Engineer
+Applied Materials
+
+Location: Santa Clara, CA
+Salary: $80000 - $190000 per year
+
+About the Role
+Applied Materials is the leader in materials engineering solutions. We are looking for a Software Engineer to develop software for semiconductor manufacturing equipment control systems.
+
+Job Description
+You will develop and maintain software applications that control and monitor semiconductor fabrication equipment. This role combines software development expertise with an understanding of industrial automation systems.
+
+Required Qualifications:
+- Bachelor's or Master's degree in Computer Science or related field
+- 3+ years of experience in software development
+- Strong proficiency in C++ and Python
+- Experience with Object Oriented Programming and design patterns
+- Knowledge of Linux operating system
+- Experience with SQL databases
+- Understanding of Embedded Systems
+- Experience with Git version control
+
+Good to Have:
+- Experience with Java
+- Knowledge of Docker and containerization
+- Familiarity with REST API development
+- Experience with Jenkins and CI/CD
+- Understanding of Agile methodologies
+- Knowledge of MATLAB or R
+- Experience with Bash scripting
+- Familiarity with Scrum framework

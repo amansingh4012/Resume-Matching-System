@@ -1,0 +1,33 @@
+Software Engineer
+Altamira Technologies
+
+Location: McLean, VA
+Salary: $110,000 - $165,000 per year
+
+About the Role
+Altamira Technologies is looking for a Software Engineer to develop cloud-based analytics platforms. You will build scalable data processing and visualization systems for national security missions.
+
+The Opportunity
+As a Software Engineer at Altamira, you will design and develop cloud-native applications, build data pipelines, and create RESTful services. You will work in small, agile teams to deliver impactful solutions using modern DevOps practices.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science, Engineering, or related field
+- 3+ years of experience in software development
+- Strong proficiency in Python and Java
+- Experience with AWS cloud services (EC2, S3, Lambda)
+- Knowledge of Docker and Kubernetes
+- Experience with REST API development
+- Proficiency in SQL and NoSQL databases (PostgreSQL, MongoDB, DynamoDB)
+- Experience with Git version control
+- Familiarity with Linux environment
+
+Preferred Qualifications:
+- Experience with React or Vue.js for frontend
+- Knowledge of Terraform and infrastructure-as-code
+- Familiarity with CI/CD pipelines and Jenkins
+- Experience with Machine Learning and Data Pipelines
+- Understanding of Agile and DevOps practices
+- Knowledge of ElasticSearch and ELK Stack
+- Experience with Microservices architecture
+- Familiarity with Grafana and Prometheus for monitoring
+- Experience with TypeScript or Go

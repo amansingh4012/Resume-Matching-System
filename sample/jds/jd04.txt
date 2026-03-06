@@ -1,0 +1,30 @@
+Software Engineer
+Astra
+
+Location: Alameda, CA
+Salary: $139,000 -- $257,550 annually
+
+About the Role
+Astra is on a mission to improve life on Earth from space. We are looking for a Software Engineer to join our flight software team. You will develop mission-critical software for launch vehicles and satellite systems.
+
+The Opportunity
+As a Software Engineer at Astra, you will design and implement embedded software systems. You will work closely with hardware engineers, participate in testing and validation, and contribute to the next generation of space launch technology.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science, Aerospace Engineering, or related field
+- 5-7 + years of relevant experience in embedded software development
+- Strong proficiency in C and C++
+- Experience with RTOS (Real-Time Operating Systems)
+- Knowledge of Embedded Systems design and development
+- Familiarity with Linux operating system
+- Experience with Git version control
+- Strong understanding of System Design
+
+Desired Multipliers:
+- Experience with Python scripting
+- Knowledge of Docker and containerization
+- Familiarity with CI/CD pipelines
+- Experience with Bash and Shell Scripting
+- Understanding of Signal Processing
+- Experience with Agile development methodologies
+- Knowledge of Rust programming language

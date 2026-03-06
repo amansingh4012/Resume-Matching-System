@@ -1,0 +1,32 @@
+Software Engineer
+Adobe
+
+Location: San Jose, CA
+Salary: $120,000.00 - $145,000.00/per year
+
+About the Role
+Adobe is seeking a Software Engineer to work on our Creative Cloud platform. You will build and maintain scalable backend services that power Adobe's suite of creative tools used by millions worldwide.
+
+Job Description
+Join our engineering team to design, develop, and deploy high-performance microservices. You will work with cutting-edge technologies and collaborate with cross-functional teams to deliver innovative solutions.
+
+Required Qualifications:
+- Bachelor's or Master's degree in Computer Science or related field
+- 3+ years of experience in software development
+- Strong proficiency in Java or Python
+- Experience with Spring Boot or Django frameworks
+- Hands-on experience with Microservices architecture
+- Proficiency with REST API design and development
+- Experience with cloud platforms (AWS or Azure)
+- Strong understanding of SQL and databases (MySQL, PostgreSQL)
+- Familiarity with Docker and containerization
+- Experience with Git and CI/CD practices
+
+Nice to Have:
+- Experience with Kubernetes
+- Knowledge of React or Angular for frontend
+- Familiarity with MongoDB or Redis
+- Experience with Jenkins or GitLab CI/CD
+- Understanding of System Design principles
+- Experience with Agile methodologies
+- Knowledge of Kafka or ActiveMQ messaging systems

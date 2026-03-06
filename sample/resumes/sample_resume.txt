@@ -1,0 +1,49 @@
+Aman Kumar Singh
+aman.kumar.singh@email.com
++91-9876543210
+Bangalore, India
+
+Professional Summary
+Full Stack Software Engineer with 3 years of experience building web applications and microservices. Proficient in Java, Python, and JavaScript with hands-on experience in cloud technologies and DevOps practices. Passionate about building scalable, reliable systems.
+
+Expected CTC: 8 LPA
+
+Technical Skills
+Languages: Java, Python, JavaScript, SQL, HTML, CSS
+Frameworks: Spring Boot, React, Node.js, Express
+Databases: MySQL, PostgreSQL, MongoDB
+DevOps: Docker, Kubernetes, Jenkins, CI/CD
+Cloud: AWS
+Tools: Git, JIRA, REST API
+Methodologies: Agile, Scrum
+Concepts: Microservices, REST
+OS: Linux
+
+Professional Experience
+
+Software Engineer — TechCorp Solutions
+Jan 2023 - Present
+- Designed and developed RESTful microservices using Java and Spring Boot serving 50K+ daily requests
+- Built interactive frontend dashboards using React and JavaScript
+- Deployed applications on AWS using Docker and Kubernetes
+- Implemented CI/CD pipelines using Jenkins
+- Worked with MySQL and PostgreSQL databases for data persistence
+- Collaborated in Agile sprints with cross-functional teams
+
+Junior Software Developer — WebApps Pvt Ltd
+Mar 2021 - Dec 2022
+- Developed backend services using Node.js and Express
+- Built and consumed REST APIs for internal tools
+- Managed MongoDB databases for NoSQL data storage
+- Created responsive web interfaces using HTML, CSS, and JavaScript
+- Used Git for version control and participated in code reviews
+- Deployed services on Linux servers
+
+Education
+Bachelor of Technology in Computer Science
+XYZ Institute of Technology, Bangalore — 2021
+CGPA: 8.5/10
+
+Certifications
+- AWS Certified Cloud Practitioner
+- Oracle Certified Associate, Java SE 8 Programmer

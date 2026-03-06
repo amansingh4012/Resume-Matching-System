@@ -1,0 +1,31 @@
+Software Developer
+Accenture Federal Services
+
+Location: Washington, DC
+Pay Range: 61087 - 104364
+
+About the Role
+Accenture Federal Services is looking for a Software Developer to support federal government digital transformation initiatives. You will work on mission-critical applications serving federal agencies.
+
+Job Description
+Join our team to develop and maintain web applications for government clients. You will work in a secure environment, collaborating with cross-functional teams to deliver quality software solutions on time and within budget.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science or related field
+- At least 2 years of professional experience
+- Proficiency in Java and JavaScript
+- Experience with React or Angular frameworks
+- Knowledge of SQL databases (PostgreSQL, Microsoft SQL Server)
+- Experience with REST API development
+- Understanding of Agile and Scrum practices
+- Experience with Git version control
+
+Desired Qualifications:
+- Experience with Node.js and Express
+- Knowledge of Docker containerization
+- Familiarity with AWS or Azure cloud services
+- Experience with Jenkins and CI/CD
+- Understanding of DevSecOps practices
+- Knowledge of MongoDB
+- Experience with TypeScript
+- Familiarity with JIRA and Confluence

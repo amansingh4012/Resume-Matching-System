@@ -1,0 +1,34 @@
+Software Engineer
+BigBear.ai
+
+Location: Columbia, MD
+Salary: $100,000 - $140,000 per year
+
+About the Role
+BigBear.ai is seeking a Software Engineer to develop AI-powered analytics and decision support systems. You will work at the intersection of software engineering and machine learning to build intelligent solutions for government and commercial clients.
+
+Overview
+Join our engineering team to design and build scalable data processing systems, develop machine learning pipelines, and create web-based interfaces for data visualization and analysis.
+
+Required Qualifications:
+- Bachelor's or Master's degree in Computer Science or related field
+- 3+ years of experience in software development
+- Strong proficiency in Python
+- Experience with Machine Learning frameworks (PyTorch)
+- Knowledge of SQL and NoSQL databases (PostgreSQL, MongoDB)
+- Experience with REST API development
+- Familiarity with Docker and containerization
+- Experience with AWS cloud services
+- Experience with Git version control
+- Understanding of Data Pipelines
+
+Preferred Qualifications:
+- Experience with Java or Scala
+- Knowledge of Kubernetes
+- Familiarity with React or Angular for frontend
+- Experience with ElasticSearch
+- Understanding of CI/CD and DevOps practices
+- Knowledge of Terraform
+- Experience with Agile methodologies
+- Familiarity with Kafka for data streaming
+- Experience with AI and Computer Vision

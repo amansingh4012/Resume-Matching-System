@@ -1,0 +1,32 @@
+Software Engineer
+Bcore
+
+Location: Remote
+Compensation: $58.65/hour to $181,000/year
+
+About the Role
+Bcore is looking for a Software Engineer to join our platform engineering team. You will design and develop cloud-native applications that support our clients' digital transformation journeys.
+
+Overview
+You will build and maintain scalable backend services, work with modern cloud infrastructure, and collaborate with product and design teams to deliver high-quality software solutions.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science or equivalent
+- Minimum of 4 years of software development experience
+- Strong proficiency in Java and Spring Boot
+- Experience with Microservices architecture
+- Knowledge of AWS cloud services
+- Proficiency in SQL and relational databases (MySQL, PostgreSQL)
+- Experience with Docker and Kubernetes
+- Hands-on experience with REST API development
+- Experience with Git version control
+
+Nice to Have:
+- Experience with Python
+- Knowledge of React or Angular
+- Familiarity with MongoDB or DynamoDB
+- Experience with Terraform
+- Understanding of CI/CD and DevOps practices
+- Knowledge of Kafka or ActiveMQ messaging
+- Experience with Agile and Scrum
+- Familiarity with Jenkins

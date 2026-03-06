@@ -1,0 +1,1482 @@
+{
+  "name": "Aman Kumar Singh",
+  "salary": "8 LPA",
+  "yearOfExperience": 3,
+  "resumeSkills": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "SQL",
+    "HTML",
+    "CSS",
+    "Spring Boot",
+    "React",
+    "Node.js",
+    "Express",
+    "REST API",
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Oracle",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "CI/CD",
+    "DevOps",
+    "AWS",
+    "Git",
+    "JIRA",
+    "Agile",
+    "Scrum",
+    "Microservices",
+    "REST",
+    "Full Stack",
+    "Linux"
+  ],
+  "matchingJobs": [
+    {
+      "jobId": "JD002",
+      "role": "Java/Angular Full Stack Developer",
+      "aboutRole": "You will be responsible for designing and developing scalable web applications using Java and Angular. The role involves working in Agile teams, participating in code reviews, and mentoring junior developers.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "JavaScript",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "HTML",
+          "presentInResume": true
+        },
+        {
+          "skill": "CSS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Spring Boot",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scrum",
+          "presentInResume": true
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST",
+          "presentInResume": true
+        },
+        {
+          "skill": "Full Stack",
+          "presentInResume": true
+        },
+        {
+          "skill": "Node.js",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Azure",
+          "presentInResume": false
+        },
+        {
+          "skill": "TDD",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 88
+    },
+    {
+      "jobId": "JD010",
+      "role": "Software Engineer",
+      "aboutRole": "Bcore is looking for a Software Engineer to join our platform engineering team. You will design and develop cloud-native applications that support our clients' digital transformation journeys.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Spring Boot",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "ActiveMQ",
+          "presentInResume": false
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "DynamoDB",
+          "presentInResume": false
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "Terraform",
+          "presentInResume": false
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scrum",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 83
+    },
+    {
+      "jobId": "JD014",
+      "role": "Software Engineer Mid - Forensic and Investigative Technologies",
+      "aboutRole": "As a Software Engineer, you will build and maintain applications for digital forensic analysis, evidence management, and investigative workflows. You will work with large datasets, develop intuitive user interfaces, and ensure data integrity and security across all systems.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "JavaScript",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "TypeScript",
+          "presentInResume": false
+        },
+        {
+          "skill": "Node.js",
+          "presentInResume": true
+        },
+        {
+          "skill": "Express",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "ElasticSearch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Azure",
+          "presentInResume": false
+        },
+        {
+          "skill": "JIRA",
+          "presentInResume": true
+        },
+        {
+          "skill": "Confluence",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 83
+    },
+    {
+      "jobId": "JD009",
+      "role": "Full Stack Software Engineer - Build Reliability",
+      "aboutRole": "As a Full Stack Engineer, you will build web applications and backend services that support SpaceX's manufacturing operations. You will work with engineers across the company to deliver tools that improve build reliability and production efficiency.",
+      "skillsAnalysis": [
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "JavaScript",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Node.js",
+          "presentInResume": true
+        },
+        {
+          "skill": "Express",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Full Stack",
+          "presentInResume": true
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "TypeScript",
+          "presentInResume": false
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Redis",
+          "presentInResume": false
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "Prometheus",
+          "presentInResume": false
+        },
+        {
+          "skill": "Grafana",
+          "presentInResume": false
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "GCP",
+          "presentInResume": false
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 78
+    },
+    {
+      "jobId": "JD005",
+      "role": "Software Engineer - MUOS Satellite Legacy Elements (SLE)",
+      "aboutRole": "You will be part of a team developing ground system software for the MUOS satellite constellation. The role requires working with legacy and modern systems, implementing new features, and ensuring system reliability and security.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Oracle",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scrum",
+          "presentInResume": true
+        },
+        {
+          "skill": "Object Oriented Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Unix",
+          "presentInResume": false
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "Spring Boot",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "SVN",
+          "presentInResume": false
+        },
+        {
+          "skill": "JIRA",
+          "presentInResume": true
+        },
+        {
+          "skill": "Confluence",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 77
+    },
+    {
+      "jobId": "JD008",
+      "role": "Software Developer",
+      "aboutRole": "Join our team to develop and maintain web applications for government clients. You will work in a secure environment, collaborating with cross-functional teams to deliver quality software solutions on time and within budget.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "JavaScript",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Microsoft SQL Server",
+          "presentInResume": false
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scrum",
+          "presentInResume": true
+        },
+        {
+          "skill": "TypeScript",
+          "presentInResume": false
+        },
+        {
+          "skill": "Node.js",
+          "presentInResume": true
+        },
+        {
+          "skill": "Express",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevSecOps",
+          "presentInResume": false
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Azure",
+          "presentInResume": false
+        },
+        {
+          "skill": "JIRA",
+          "presentInResume": true
+        },
+        {
+          "skill": "Confluence",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 74
+    },
+    {
+      "jobId": "JD003",
+      "role": "Software Engineer",
+      "aboutRole": "Join our engineering team to design, develop, and deploy high-performance microservices. You will work with cutting-edge technologies and collaborate with cross-functional teams to deliver innovative solutions.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Spring Boot",
+          "presentInResume": true
+        },
+        {
+          "skill": "Django",
+          "presentInResume": false
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Azure",
+          "presentInResume": false
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "ActiveMQ",
+          "presentInResume": false
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Redis",
+          "presentInResume": false
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "GitLab CI/CD",
+          "presentInResume": false
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "System Design",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 71
+    },
+    {
+      "jobId": "JD012",
+      "role": "Software Engineer - Command and Control Systems",
+      "aboutRole": "You will design and implement software for real-time command and control systems. This includes developing new capabilities, maintaining existing systems, and working closely with systems engineers and domain experts to deliver reliable defense software solutions.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Oracle",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "SDLC",
+          "presentInResume": false
+        },
+        {
+          "skill": "Object Oriented Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "System Design",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Unix",
+          "presentInResume": false
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "Spring Boot",
+          "presentInResume": true
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "SVN",
+          "presentInResume": false
+        },
+        {
+          "skill": "JIRA",
+          "presentInResume": true
+        },
+        {
+          "skill": "Confluence",
+          "presentInResume": false
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 69
+    },
+    {
+      "jobId": "JD006",
+      "role": "Software Engineer",
+      "aboutRole": "You will develop and maintain software applications that control and monitor semiconductor fabrication equipment. This role combines software development expertise with an understanding of industrial automation systems.",
+      "skillsAnalysis": [
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Object Oriented Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "Embedded Systems",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "Bash",
+          "presentInResume": false
+        },
+        {
+          "skill": "R",
+          "presentInResume": false
+        },
+        {
+          "skill": "MATLAB",
+          "presentInResume": false
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scrum",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 65
+    },
+    {
+      "jobId": "JD015",
+      "role": "Software Engineer",
+      "aboutRole": "As a Software Engineer at Altamira, you will design and develop cloud-native applications, build data pipelines, and create RESTful services. You will work in small, agile teams to deliver impactful solutions using modern DevOps practices.",
+      "skillsAnalysis": [
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "DynamoDB",
+          "presentInResume": false
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Data Pipelines",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "TypeScript",
+          "presentInResume": false
+        },
+        {
+          "skill": "Go",
+          "presentInResume": false
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Vue.js",
+          "presentInResume": false
+        },
+        {
+          "skill": "ElasticSearch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Jenkins",
+          "presentInResume": true
+        },
+        {
+          "skill": "Terraform",
+          "presentInResume": false
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "Prometheus",
+          "presentInResume": false
+        },
+        {
+          "skill": "Grafana",
+          "presentInResume": false
+        },
+        {
+          "skill": "ELK Stack",
+          "presentInResume": false
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        },
+        {
+          "skill": "Machine Learning",
+          "presentInResume": false
+        },
+        {
+          "skill": "JavaScript",
+          "presentInResume": true
+        }
+      ],
+      "matchingScore": 62
+    },
+    {
+      "jobId": "JD013",
+      "role": "Software Engineer",
+      "aboutRole": "BigBear.ai is seeking a Software Engineer to develop AI-powered analytics and decision support systems. You will work at the intersection of software engineering and machine learning to build intelligent solutions for government and commercial clients.",
+      "skillsAnalysis": [
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST API",
+          "presentInResume": true
+        },
+        {
+          "skill": "PostgreSQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "PyTorch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Machine Learning",
+          "presentInResume": false
+        },
+        {
+          "skill": "AI",
+          "presentInResume": false
+        },
+        {
+          "skill": "Data Pipelines",
+          "presentInResume": false
+        },
+        {
+          "skill": "Java",
+          "presentInResume": true
+        },
+        {
+          "skill": "Scala",
+          "presentInResume": false
+        },
+        {
+          "skill": "React",
+          "presentInResume": true
+        },
+        {
+          "skill": "Angular",
+          "presentInResume": false
+        },
+        {
+          "skill": "ElasticSearch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Terraform",
+          "presentInResume": false
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Computer Vision",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 61
+    },
+    {
+      "jobId": "JD007",
+      "role": "Software Engineer, Infrastructure",
+      "aboutRole": "As a Software Engineer on the Infrastructure team, you will design, build, and maintain large-scale distributed systems. You will work on performance optimization, reliability engineering, and infrastructure automation that supports Meta's products.",
+      "skillsAnalysis": [
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "SQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "MySQL",
+          "presentInResume": true
+        },
+        {
+          "skill": "MongoDB",
+          "presentInResume": true
+        },
+        {
+          "skill": "Cassandra",
+          "presentInResume": false
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "Kubernetes",
+          "presentInResume": true
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Microservices",
+          "presentInResume": true
+        },
+        {
+          "skill": "REST",
+          "presentInResume": true
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Go",
+          "presentInResume": false
+        },
+        {
+          "skill": "Rust",
+          "presentInResume": false
+        },
+        {
+          "skill": "gRPC",
+          "presentInResume": false
+        },
+        {
+          "skill": "Redis",
+          "presentInResume": false
+        },
+        {
+          "skill": "ElasticSearch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Terraform",
+          "presentInResume": false
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "DevOps",
+          "presentInResume": true
+        },
+        {
+          "skill": "Prometheus",
+          "presentInResume": false
+        },
+        {
+          "skill": "Grafana",
+          "presentInResume": false
+        },
+        {
+          "skill": "Kibana",
+          "presentInResume": false
+        },
+        {
+          "skill": "Logstash",
+          "presentInResume": false
+        },
+        {
+          "skill": "ELK Stack",
+          "presentInResume": false
+        },
+        {
+          "skill": "AWS",
+          "presentInResume": true
+        },
+        {
+          "skill": "GCP",
+          "presentInResume": false
+        },
+        {
+          "skill": "Protobuf",
+          "presentInResume": false
+        },
+        {
+          "skill": "Data Pipelines",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 45
+    },
+    {
+      "jobId": "JD011",
+      "role": "C++ Software Engineer",
+      "aboutRole": "As a C++ Engineer, you will design and implement performance-critical software components. You will work on real-time image processing pipelines, optimize algorithms for speed and accuracy, and contribute to our core technology platform.",
+      "skillsAnalysis": [
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "Object Oriented Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "Computer Vision",
+          "presentInResume": false
+        },
+        {
+          "skill": "Signal Processing",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "PyTorch",
+          "presentInResume": false
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Linear Algebra",
+          "presentInResume": false
+        },
+        {
+          "skill": "GPU Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "Machine Learning",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 43
+    },
+    {
+      "jobId": "JD004",
+      "role": "Software Engineer",
+      "aboutRole": "As a Software Engineer at Astra, you will design and implement embedded software systems. You will work closely with hardware engineers, participate in testing and validation, and contribute to the next generation of space launch technology.",
+      "skillsAnalysis": [
+        {
+          "skill": "C",
+          "presentInResume": false
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "System Design",
+          "presentInResume": false
+        },
+        {
+          "skill": "Embedded Systems",
+          "presentInResume": false
+        },
+        {
+          "skill": "RTOS",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "Rust",
+          "presentInResume": false
+        },
+        {
+          "skill": "Bash",
+          "presentInResume": false
+        },
+        {
+          "skill": "Shell Scripting",
+          "presentInResume": false
+        },
+        {
+          "skill": "Docker",
+          "presentInResume": true
+        },
+        {
+          "skill": "CI/CD",
+          "presentInResume": true
+        },
+        {
+          "skill": "Agile",
+          "presentInResume": true
+        },
+        {
+          "skill": "Signal Processing",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 40
+    },
+    {
+      "jobId": "JD001",
+      "role": "Scientific Programmer",
+      "aboutRole": "As a Scientific Programmer, you will implement algorithms in C, C++, and Python for signal processing and data analysis. You will work on GPU programming, optimize code for real-time embedded systems, and contribute to cutting-edge research projects.",
+      "skillsAnalysis": [
+        {
+          "skill": "Python",
+          "presentInResume": true
+        },
+        {
+          "skill": "C",
+          "presentInResume": false
+        },
+        {
+          "skill": "C++",
+          "presentInResume": false
+        },
+        {
+          "skill": "Embedded Systems",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linear Algebra",
+          "presentInResume": false
+        },
+        {
+          "skill": "Signal Processing",
+          "presentInResume": false
+        },
+        {
+          "skill": "GPU Programming",
+          "presentInResume": false
+        },
+        {
+          "skill": "Linux",
+          "presentInResume": true
+        },
+        {
+          "skill": "Unix",
+          "presentInResume": false
+        },
+        {
+          "skill": "MATLAB",
+          "presentInResume": false
+        },
+        {
+          "skill": "Git",
+          "presentInResume": true
+        },
+        {
+          "skill": "FPGA",
+          "presentInResume": false
+        },
+        {
+          "skill": "MPI",
+          "presentInResume": false
+        },
+        {
+          "skill": "OpenMP",
+          "presentInResume": false
+        },
+        {
+          "skill": "RTOS",
+          "presentInResume": false
+        },
+        {
+          "skill": "Computer Vision",
+          "presentInResume": false
+        }
+      ],
+      "matchingScore": 19
+    }
+  ]
+}

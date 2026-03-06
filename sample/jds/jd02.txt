@@ -1,0 +1,29 @@
+Java/Angular Full Stack Developer
+Capgemini
+
+Location: Chicago, IL (Hybrid)
+Compensation: $80,000 - $190,000 USD
+
+About the Role
+Capgemini is looking for a Java/Angular Full Stack Developer to join our digital transformation team. You will build enterprise-grade web applications for Fortune 500 clients using modern frameworks and cloud technologies.
+
+Position Overview
+You will be responsible for designing and developing scalable web applications using Java and Angular. The role involves working in Agile teams, participating in code reviews, and mentoring junior developers.
+
+Required Qualifications:
+- 5+ years of experience in software development
+- Strong proficiency in Java and Spring Boot
+- Hands-on experience with Angular or AngularJS
+- Experience building REST APIs and Microservices
+- Proficiency in SQL and relational databases like MySQL or PostgreSQL
+- Knowledge of HTML, CSS, and JavaScript
+- Experience with Git version control
+- Working knowledge of Agile and Scrum methodologies
+
+Preferred Qualifications:
+- Experience with Docker and Kubernetes
+- Familiarity with AWS or Azure cloud services
+- Knowledge of Jenkins and CI/CD pipelines
+- Experience with MongoDB or other NoSQL databases
+- Understanding of TDD practices
+- Experience with Node.js

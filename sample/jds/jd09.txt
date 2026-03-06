@@ -1,0 +1,33 @@
+Full Stack Software Engineer - Build Reliability
+SpaceX
+
+Location: Hawthorne, CA
+Salary: $120,000 - $180,000 per year
+
+About the Role
+SpaceX is looking for a Full Stack Software Engineer to join our Build Reliability team. You will develop internal tools and systems that ensure quality and efficiency in rocket manufacturing processes.
+
+The Opportunity
+As a Full Stack Engineer, you will build web applications and backend services that support SpaceX's manufacturing operations. You will work with engineers across the company to deliver tools that improve build reliability and production efficiency.
+
+Required Skills:
+- Bachelor's degree in Computer Science or related field
+- 3+ years of experience in full-stack software development
+- Strong proficiency in Python and JavaScript
+- Experience with React for frontend development
+- Experience with Node.js and Express for backend
+- Proficiency in SQL databases (PostgreSQL, MySQL)
+- Experience with REST API design and development
+- Knowledge of Docker and containerization
+- Experience with Git and version control
+- Familiarity with Linux environment
+
+Preferred Skills:
+- Experience with Kubernetes
+- Knowledge of AWS or GCP cloud platforms
+- Familiarity with CI/CD pipelines
+- Experience with Redis or MongoDB
+- Understanding of Agile methodologies
+- Experience with TypeScript
+- Knowledge of Grafana and Prometheus for monitoring
+- Experience with Full Stack development patterns

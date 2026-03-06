@@ -1,0 +1,31 @@
+Software Engineer - MUOS Satellite Legacy Elements (SLE)
+Lockheed Martin
+
+Location: Sunnyvale, CA
+Compensation: $176,000.00 - $242,000.00
+
+About the Role
+Lockheed Martin is seeking a Software Engineer to support the MUOS (Mobile User Objective System) Satellite Legacy Elements program. This role involves developing and maintaining critical communication software for military satellite systems.
+
+Position Overview
+You will be part of a team developing ground system software for the MUOS satellite constellation. The role requires working with legacy and modern systems, implementing new features, and ensuring system reliability and security.
+
+Basic Qualifications:
+- Bachelor's degree in Computer Science, Engineering, or related field
+- 7 years of strong handson experience in software engineering
+- Proficiency in Java and C++
+- Experience with Linux and Unix operating systems
+- Knowledge of SQL and database systems (Oracle, PostgreSQL)
+- Understanding of Object Oriented Programming
+- Experience with Agile and Scrum methodologies
+- Active Secret clearance or ability to obtain one
+
+Desired Skills:
+- Experience with Python scripting
+- Knowledge of Docker and Kubernetes
+- Familiarity with Jenkins and CI/CD
+- Experience with Git and SVN version control
+- Understanding of DevOps practices
+- Knowledge of REST API development
+- Experience with Spring Boot framework
+- Familiarity with JIRA and Confluence

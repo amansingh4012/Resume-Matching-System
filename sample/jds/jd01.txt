@@ -1,0 +1,29 @@
+Scientific Programmer
+Riverside Research
+
+Location: Beavercreek, OH
+Salary: $75,500—$131,200 USD
+
+About the Role
+Riverside Research is seeking a Scientific Programmer to support research and development projects in signal processing and embedded systems. You will work closely with scientists and engineers to develop high-performance computing solutions.
+
+The Opportunity
+As a Scientific Programmer, you will implement algorithms in C, C++, and Python for signal processing and data analysis. You will work on GPU programming, optimize code for real-time embedded systems, and contribute to cutting-edge research projects.
+
+Required Qualifications:
+- Bachelor's degree in Computer Science, Electrical Engineering, or related field
+- 2+ years of programming experience
+- Strong proficiency in C and C++
+- Experience with Python for scientific computing
+- Knowledge of Signal Processing concepts
+- Familiarity with Linux and Unix environments
+- Understanding of Linear Algebra and numerical methods
+
+Desired Qualifications:
+- Experience with FPGA development
+- Knowledge of GPU Programming (CUDA)
+- Familiarity with MATLAB
+- Experience with MPI and OpenMP for parallel computing
+- Understanding of embedded systems and RTOS
+- Experience with Git version control
+- Knowledge of Computer Vision algorithms
