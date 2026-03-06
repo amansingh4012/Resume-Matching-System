@@ -80,7 +80,7 @@ async function main() {
     const app = createApp();
     // Serve static frontend from public/ BEFORE API routes
     app.use(express.static(path.join(__dirname, '..', 'public')));
-    const port = args.port || 3000;
+    const port = args.port || process.env.PORT || 3000;
     app.listen(port, () => {
       console.log(`Resume Matching API server running on http://localhost:${port}`);
       console.log('Endpoints:');
