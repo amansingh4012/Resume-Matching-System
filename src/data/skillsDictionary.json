@@ -1,0 +1,108 @@
+{
+  "languages": [
+    "Java", "Python", "C", "C++", "C#", "JavaScript", "TypeScript", "Fortran",
+    "Go", "Rust", "Bash", "SQL", "HTML", "CSS", "Hack", "Ruby", "Scala",
+    "Kotlin", "R", "MATLAB", "Shell Scripting", "PHP", "Swift", "Dart",
+    "Perl", "Lua", "Haskell", "Elixir", "Erlang", "Clojure", "Groovy",
+    "Objective-C", "Assembly", "VHDL", "Verilog", "Solidity", "COBOL",
+    "F#", "Julia", "OCaml", "Zig", "Nim"
+  ],
+  "frameworks": [
+    "Spring Boot", "Spring", "React", "Angular", "AngularJS", "Node.js", "Express",
+    ".NET", "ASP.NET", "Django", "Flask", "FastAPI", "jQuery", "Vue.js", "Next.js",
+    "Nuxt.js", "gRPC", "REST API", "ActiveMQ", "Svelte", "SvelteKit", "Gatsby",
+    "Remix", "Astro", "Ember.js", "Backbone.js", "Ruby on Rails", "Rails",
+    "Laravel", "Symfony", "CodeIgniter", "Gin", "Fiber", "Echo",
+    "Nest.js", "Hono", "Koa", "Hapi", "Fastify", "Electron",
+    "React Native", "Flutter", "Ionic", "Expo", "Tauri",
+    "Spring MVC", "Spring Cloud", "Hibernate", "MyBatis",
+    "Tailwind CSS", "Bootstrap", "Material UI", "Chakra UI", "DaisyUI",
+    "Ant Design", "Shadcn UI",
+    "Socket.io", "GraphQL", "Apollo", "Prisma", "Prisma ORM",
+    "Sequelize", "TypeORM", "Mongoose", "Drizzle ORM",
+    "Zustand", "Redux", "Recoil", "MobX", "Vuex", "Pinia",
+    "React Query", "TanStack Query", "SWR",
+    "Three.js", "D3.js", "Chart.js",
+    "Celery", "RabbitMQ", "Kafka", "Apache Kafka",
+    "Spring Security", "Passport.js", "NextAuth", "Clerk",
+    "Strapi", "Sanity", "Contentful", "WordPress"
+  ],
+  "databases": [
+    "MySQL", "PostgreSQL", "Microsoft SQL Server", "MongoDB", "DB2", "SQLite",
+    "Redis", "DynamoDB", "Cassandra", "ElasticSearch", "Oracle",
+    "MariaDB", "CouchDB", "Neo4j", "InfluxDB", "TimescaleDB",
+    "Firebase", "Firestore", "Supabase", "PlanetScale", "Neon",
+    "Memcached", "Amazon RDS", "Amazon Redshift", "BigQuery",
+    "Snowflake", "Apache Hive", "Apache HBase", "Pinecone", "Weaviate",
+    "Milvus", "ChromaDB"
+  ],
+  "devops": [
+    "Docker", "Kubernetes", "Jenkins", "Terraform", "Chef", "Ansible", "CI/CD",
+    "GitLab CI/CD", "DevOps", "DevSecOps", "Prometheus", "Grafana", "Kibana",
+    "Logstash", "ELK Stack", "Docker Swarm", "Puppet", "Vagrant",
+    "GitHub Actions", "CircleCI", "Travis CI", "ArgoCD", "Helm",
+    "Nginx", "Apache", "Caddy", "HAProxy", "Istio", "Envoy",
+    "Datadog", "New Relic", "Splunk", "PagerDuty",
+    "Pulumi", "CloudFormation", "Packer"
+  ],
+  "cloud": [
+    "AWS", "Azure", "GCP", "Cloud Computing",
+    "AWS S3", "AWS Lambda", "AWS EC2", "AWS ECS", "AWS EKS", "AWS SQS", "AWS SNS",
+    "AWS CloudFront", "AWS Route 53", "AWS IAM", "AWS CDK",
+    "Azure DevOps", "Azure Functions", "Azure Blob Storage",
+    "Google Cloud Functions", "Google Cloud Run", "Google Cloud Storage",
+    "Cloudflare", "Cloudflare Workers", "Vercel", "Netlify", "Heroku",
+    "DigitalOcean", "Linode", "Fly.io", "Railway", "Render"
+  ],
+  "tools": [
+    "Git", "SVN", "ClearCase", "JIRA", "Confluence", "FPGA", "PyTorch", "MPI",
+    "OpenMP", "Protobuf", "VS Code", "IntelliJ", "Eclipse", "Vim", "Neovim",
+    "Postman", "Insomnia", "Swagger", "OpenAPI",
+    "Webpack", "Vite", "Babel", "ESLint", "Prettier", "Turbopack", "Rollup", "Parcel",
+    "npm", "Yarn", "pnpm", "Bun",
+    "Jupyter", "Anaconda", "Colab",
+    "TensorFlow", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib",
+    "OpenCV", "Hugging Face", "LangChain", "NLTK", "SpaCy",
+    "Figma", "Adobe XD", "Sketch", "Storybook",
+    "Notion", "Trello", "Asana", "Linear", "Slack",
+    "Selenium", "Cypress", "Playwright", "Jest", "Mocha", "JUnit", "TestNG",
+    "Pytest", "Vitest", "Supertest",
+    "RabbitMQ", "Apache Spark", "Apache Airflow", "Apache Flink",
+    "Hadoop", "MapReduce", "Tableau", "Power BI", "Looker",
+    "SonarQube", "Snyk", "Trivy"
+  ],
+  "methodologies": [
+    "Agile", "Scrum", "Kanban", "TDD", "SDLC", "Waterfall", "SAFe",
+    "BDD", "DDD", "XP", "Lean", "Six Sigma", "ITIL",
+    "Pair Programming", "Code Review", "Continuous Integration", "Continuous Deployment"
+  ],
+  "concepts": [
+    "Microservices", "REST", "Object Oriented Programming", "Machine Learning",
+    "AI", "Data Pipelines", "System Design", "Full Stack", "UI/UX",
+    "Embedded Systems", "RTOS", "Linear Algebra", "Computer Vision",
+    "Signal Processing", "GPU Programming",
+    "Deep Learning", "Natural Language Processing", "NLP",
+    "Data Structures", "Algorithms", "Design Patterns",
+    "Event Driven Architecture", "Serverless", "SOA",
+    "Message Queues", "Pub/Sub", "WebSockets", "WebRTC",
+    "OAuth", "JWT", "SSO", "SAML", "RBAC",
+    "API Gateway", "Load Balancing", "Caching", "CDN",
+    "Distributed Systems", "High Availability", "Fault Tolerance",
+    "Data Warehousing", "ETL", "Data Modeling", "Data Engineering",
+    "Big Data", "Blockchain", "Smart Contracts", "Web3",
+    "IoT", "Edge Computing", "Cloud Native",
+    "Responsive Design", "Accessibility", "SEO",
+    "CI/CD Pipelines", "Infrastructure as Code",
+    "Container Orchestration", "Service Mesh",
+    "Penetration Testing", "Cybersecurity", "Encryption",
+    "Multithreading", "Concurrency", "Parallel Computing",
+    "Compiler Design", "Operating Systems", "Computer Networks",
+    "Database Management", "Version Control",
+    "Software Architecture", "Clean Architecture", "Monorepo",
+    "Test Automation", "Performance Testing", "Load Testing"
+  ],
+  "os": [
+    "Linux", "Windows", "Unix", "macOS", "Ubuntu", "CentOS", "Red Hat",
+    "Debian", "Fedora", "Alpine", "FreeBSD", "Android", "iOS"
+  ]
+}
