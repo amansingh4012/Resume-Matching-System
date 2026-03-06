@@ -281,12 +281,9 @@ function matchResumeToJDs(resumeData, jdDataArray) {
     // Final score: clamp between 0-100
     const matchingScore = Math.max(0, Math.min(100, Math.round(skillScore + expBonus)));
 
-    // Simplified skillsAnalysis for backward compatibility
     const skillsAnalysis = allAnalysis.map(s => ({
       skill: s.skill,
-      required: s.required,
       presentInResume: s.presentInResume,
-      exactMatch: s.exactMatch,
     }));
 
     return {
@@ -295,15 +292,6 @@ function matchResumeToJDs(resumeData, jdDataArray) {
       aboutRole: jd.aboutRole,
       skillsAnalysis,
       matchingScore,
-      details: {
-        requiredMatched: requiredAnalysis.filter(s => s.exactMatch).length,
-        requiredTotal: uniqueRequired.length,
-        optionalMatched: optionalAnalysis.filter(s => s.exactMatch).length,
-        optionalTotal: uniqueOptional.length,
-        experienceBonus: expBonus,
-        resumeExperience: resumeData.yearOfExperience,
-        jdExperience: jd.yearOfExperience,
-      },
     };
   });
 

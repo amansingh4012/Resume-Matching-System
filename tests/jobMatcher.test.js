@@ -56,12 +56,11 @@ describe('matchResumeToJDs', () => {
     const docker = analysis.find(s => s.skill === 'Docker');
 
     expect(java.presentInResume).toBe(true);
-    expect(java.exactMatch).toBe(true);
     expect(python.presentInResume).toBe(false);
     expect(docker.presentInResume).toBe(true);
   });
 
-  test('marks skills as required or optional in analysis', () => {
+  test('marks skills as present or absent in analysis', () => {
     const resume = { resumeSkills: ['Java'] };
     const jds = [{
       jobId: 'JD001', role: 'Dev', aboutRole: '',
@@ -74,8 +73,8 @@ describe('matchResumeToJDs', () => {
     const java = analysis.find(s => s.skill === 'Java');
     const docker = analysis.find(s => s.skill === 'Docker');
 
-    expect(java.required).toBe(true);
-    expect(docker.required).toBe(false);
+    expect(java.presentInResume).toBe(true);
+    expect(docker.presentInResume).toBe(false);
   });
 
   test('results are sorted by matchingScore descending', () => {
@@ -121,7 +120,6 @@ describe('matchResumeToJDs', () => {
     expect(results[0]).toHaveProperty('aboutRole', 'Build APIs');
     expect(results[0]).toHaveProperty('skillsAnalysis');
     expect(results[0]).toHaveProperty('matchingScore');
-    expect(results[0]).toHaveProperty('details');
     expect(Array.isArray(results[0].skillsAnalysis)).toBe(true);
   });
 
@@ -136,7 +134,6 @@ describe('matchResumeToJDs', () => {
 
     const results = matchResumeToJDs(resume, jds);
     expect(results[0].matchingScore).toBe(100); // 100 + bonus clamped to 100
-    expect(results[0].details.experienceBonus).toBeGreaterThan(0);
   });
 
   test('penalizes score when experience is far below requirement', () => {
@@ -149,7 +146,6 @@ describe('matchResumeToJDs', () => {
 
     const results = matchResumeToJDs(resume, jds);
     expect(results[0].matchingScore).toBeLessThan(100);
-    expect(results[0].details.experienceBonus).toBeLessThan(0);
   });
 
   test('no experience penalty when data is missing', () => {
@@ -160,7 +156,7 @@ describe('matchResumeToJDs', () => {
     }];
 
     const results = matchResumeToJDs(resume, jds);
-    expect(results[0].details.experienceBonus).toBe(0);
+    expect(results[0].matchingScore).toBe(100); // no penalty when data missing
   });
 
   // --- Skill category similarity ---
@@ -199,8 +195,8 @@ describe('matchResumeToJDs', () => {
     expect(results[0].matchingScore).toBeGreaterThanOrEqual(40);
   });
 
-  // --- Details object ---
-  test('details shows required vs optional match counts', () => {
+  // --- Output format ---
+  test('each skill entry has only skill and presentInResume fields', () => {
     const resume = { resumeSkills: ['Java', 'Docker'], yearOfExperience: 3 };
     const jds = [{
       jobId: 'JD001', role: 'Dev', aboutRole: '',
@@ -209,13 +205,8 @@ describe('matchResumeToJDs', () => {
     }];
 
     const results = matchResumeToJDs(resume, jds);
-    const d = results[0].details;
+    const entry = results[0].skillsAnalysis[0];
 
-    expect(d.requiredMatched).toBe(1);
-    expect(d.requiredTotal).toBe(2);
-    expect(d.optionalMatched).toBe(1);
-    expect(d.optionalTotal).toBe(2);
-    expect(d.resumeExperience).toBe(3);
-    expect(d.jdExperience).toBe(3);
+    expect(Object.keys(entry).sort()).toEqual(['presentInResume', 'skill']);
   });
 });
